@@ -23,6 +23,7 @@
 		F4D1CEFF220FE36300D653D4 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D1CEFE220FE36300D653D4 /* PostData.swift */; };
 		F4D1CF02220FE3F400D653D4 /* PostTableViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D1CF00220FE3F400D653D4 /* PostTableViewTableViewCell.swift */; };
 		F4D1CF03220FE3F400D653D4 /* PostTableViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4D1CF01220FE3F400D653D4 /* PostTableViewTableViewCell.xib */; };
+		F4D1CF0522110EBC00D653D4 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D1CF0422110EBC00D653D4 /* Comment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		F4D1CEFE220FE36300D653D4 /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
 		F4D1CF00220FE3F400D653D4 /* PostTableViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewTableViewCell.swift; sourceTree = "<group>"; };
 		F4D1CF01220FE3F400D653D4 /* PostTableViewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewTableViewCell.xib; sourceTree = "<group>"; };
+		F4D1CF0422110EBC00D653D4 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		F852E09EA8C05D496EBB4AB9 /* Pods_Instagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Instagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -114,6 +116,7 @@
 				F4D1CEFE220FE36300D653D4 /* PostData.swift */,
 				F4D1CF00220FE3F400D653D4 /* PostTableViewTableViewCell.swift */,
 				F4D1CF01220FE3F400D653D4 /* PostTableViewTableViewCell.xib */,
+				F4D1CF0422110EBC00D653D4 /* Comment.swift */,
 			);
 			path = Instagram;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 				F4D1CEFD220FE1C100D653D4 /* Const.swift in Sources */,
 				F4C253DE220EE2C800215396 /* SettingViewController.swift in Sources */,
 				F4D1CF02220FE3F400D653D4 /* PostTableViewTableViewCell.swift in Sources */,
+				F4D1CF0522110EBC00D653D4 /* Comment.swift in Sources */,
 				F4C253D8220EE28D00215396 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

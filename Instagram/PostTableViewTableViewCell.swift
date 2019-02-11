@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
 
 class PostTableViewTableViewCell: UITableViewCell {
 
@@ -16,7 +18,21 @@ class PostTableViewTableViewCell: UITableViewCell {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var captionLabel: UILabel!
     
+    @IBOutlet weak var commentButton: UIButton!
     
+    @IBOutlet weak var commentTextField: UITextField!
+//    @IBAction func commentButton(_ sender: Any) {
+//
+//        self.captionLabel.text = commentTextField.text;
+//
+//        // 辞書を作成してFirebaseに保存する
+//        let postRef = Database.database().reference().child(Const.PostPath)
+//        let postDic = ["caption": textField.text!, "image": imageString, "time": String(time), "name": name!]
+//        postRef.childByAutoId().setValue(postDic)
+//
+//
+//
+//    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -27,11 +43,24 @@ class PostTableViewTableViewCell: UITableViewCell {
         
         // Configure the view for the selected state
     }
-    
     func setPostData(_ postData: PostData) {
         self.postImageView.image = postData.image
         
-        self.captionLabel.text = "\(postData.name!) : \(postData.caption!)"
+        var commentList: String = ""
+        var names: [String] = []
+        postData.commentsName.forEach { commentName in
+            names.append(commentName)
+        }
+        var comments: [String] = []
+        postData.comments.forEach { comment in
+            comments.append(comment)
+        }
+
+        for i in 0..<names.count {
+            commentList += names[i] + "：" + comments[i] + "\n"
+        }
+
+        self.captionLabel.text = "\(postData.name!) : \(postData.caption!) \n \(commentList)"
         let likeNumber = postData.likes.count
         likeLabel.text = "\(likeNumber)"
         

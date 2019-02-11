@@ -117,8 +117,32 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         // セル内のボタンのアクションをソースコードで設定する
         cell.likeButton.addTarget(self, action:#selector(handleButton(_:forEvent:)), for: .touchUpInside)
-        
+        cell.commentButton.addTarget(self, action: #selector(handleCommentButton(_:forEvent:)), for: .touchUpInside)
         return cell
+    }
+    // コメントボタンがタップされた時に呼ばれるメソッド
+    @objc func handleCommentButton(_ sender: UIButton, forEvent event: UIEvent) {
+        print("DEBUG_PRINT: Commentボタンがタップされました。")
+        
+        // タップされたセルのインデックスを求める
+        let touch = event.allTouches?.first
+        let point = touch!.location(in: self.tableView)
+        let indexPath = tableView.indexPathForRow(at: point)
+        
+        let cell = tableView.cellForRow(at: indexPath!) as! PostTableViewTableViewCell
+
+        // 配列からタップされたインデックスのデータを取り出す
+        let postData = postArray[indexPath!.row]
+        
+        let displayname = Auth.auth().currentUser?.displayName
+//        let comment:Comment = Comment(comment:cell.commentTextField.text!, name:displayname!)
+        // Firebaseに保存するデータの準備
+        postData.comments.append(cell.commentTextField.text!)
+        postData.commentsName.append(displayname!)
+//        postData.commentsName.append(displayname!)
+        let postRef = Database.database().reference().child(Const.PostPath).child(postData.id!)
+        let comments = ["comments": postData.comments, "commentsName": postData.commentsName]
+        postRef.updateChildValues(comments)
     }
     
     // セル内のボタンがタップされた時に呼ばれるメソッド
@@ -128,6 +152,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         // タップされたセルのインデックスを求める
         let touch = event.allTouches?.first
         let point = touch!.location(in: self.tableView)
+        
         let indexPath = tableView.indexPathForRow(at: point)
         
         // 配列からタップされたインデックスのデータを取り出す
