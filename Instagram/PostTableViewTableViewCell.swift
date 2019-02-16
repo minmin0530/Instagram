@@ -44,6 +44,7 @@ class PostTableViewTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     func setPostData(_ postData: PostData) {
+        commentTextField.text = ""
         self.postImageView.image = postData.image
         
         var commentList: String = ""

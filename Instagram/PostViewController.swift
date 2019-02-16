@@ -30,7 +30,6 @@ class PostViewController: UIViewController {
         let postRef = Database.database().reference().child(Const.PostPath)
         let postDic = ["caption": textField.text!, "image": imageString, "time": String(time), "name": name!]
         postRef.childByAutoId().setValue(postDic)
-        postRef.childByAutoId().updateChildValues(postDic)
         // HUDで投稿完了を表示する
         SVProgressHUD.showSuccess(withStatus: "投稿しました")
         

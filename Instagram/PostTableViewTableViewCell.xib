@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -34,17 +34,18 @@
                         <state key="normal" title="Button" image="like_none"/>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jg3-TI-zlM">
-                        <rect key="frame" x="76" y="339" width="40" height="40"/>
+                        <rect key="frame" x="76" y="339" width="20" height="40"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="40" id="Fkb-qO-alS"/>
+                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="20" id="Puh-et-Q9c"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="20" id="a42-MA-ne5"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E63-3T-nqB">
-                        <rect key="frame" x="252" y="339" width="42" height="40"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <rect key="frame" x="263" y="339" width="31" height="40"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -54,14 +55,6 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9e4-Po-KgL">
-                        <rect key="frame" x="126" y="339" width="80" height="40"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="80" id="lYv-hq-rVN"/>
-                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="ore-Dk-qKi"/>
-                        </constraints>
-                        <state key="normal" title="コメント" backgroundImage="btn"/>
-                    </button>
                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="コメントを書いて下さい" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="knd-zt-rSV">
                         <rect key="frame" x="26" y="389" width="268" height="30"/>
                         <constraints>
@@ -72,6 +65,14 @@
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9e4-Po-KgL">
+                        <rect key="frame" x="106" y="339" width="80" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="lYv-hq-rVN"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="ore-Dk-qKi"/>
+                        </constraints>
+                        <state key="normal" title="コメント" backgroundImage="btn"/>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="jg3-TI-zlM" firstAttribute="centerY" secondItem="hst-OO-6Vy" secondAttribute="centerY" id="Dht-0F-4LJ"/>
@@ -84,12 +85,14 @@
                     <constraint firstItem="9e4-Po-KgL" firstAttribute="bottom" secondItem="hst-OO-6Vy" secondAttribute="bottom" id="QXG-L1-2aB"/>
                     <constraint firstItem="jg3-TI-zlM" firstAttribute="bottom" secondItem="hst-OO-6Vy" secondAttribute="bottom" id="RHe-ED-1QO"/>
                     <constraint firstItem="PGa-KD-fnX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="T3R-Jh-PcR"/>
+                    <constraint firstItem="9e4-Po-KgL" firstAttribute="leading" secondItem="jg3-TI-zlM" secondAttribute="trailing" constant="10" id="TPV-Y5-tgC"/>
                     <constraint firstItem="9e4-Po-KgL" firstAttribute="leading" secondItem="jg3-TI-zlM" secondAttribute="trailing" constant="10" id="VWL-p1-xfT"/>
                     <constraint firstAttribute="trailingMargin" secondItem="knd-zt-rSV" secondAttribute="trailing" constant="10" id="ZPY-af-PIq"/>
                     <constraint firstItem="hst-OO-6Vy" firstAttribute="top" secondItem="kE7-74-s6h" secondAttribute="bottom" constant="10" id="adW-5L-ciN"/>
                     <constraint firstItem="PGa-KD-fnX" firstAttribute="top" secondItem="knd-zt-rSV" secondAttribute="bottom" constant="10" id="b8I-H4-UeY"/>
                     <constraint firstAttribute="trailingMargin" secondItem="PGa-KD-fnX" secondAttribute="trailing" constant="10" id="ebH-Mr-cNd"/>
                     <constraint firstAttribute="bottomMargin" secondItem="PGa-KD-fnX" secondAttribute="bottom" constant="10" id="fUX-mH-mCN"/>
+                    <constraint firstItem="9e4-Po-KgL" firstAttribute="leading" secondItem="jg3-TI-zlM" secondAttribute="trailing" constant="10" id="mkF-6g-UHo"/>
                     <constraint firstItem="kE7-74-s6h" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" id="wHs-7i-zfT"/>
                     <constraint firstItem="jg3-TI-zlM" firstAttribute="leading" secondItem="hst-OO-6Vy" secondAttribute="trailing" constant="10" id="wXw-Vy-reF"/>
                     <constraint firstItem="hst-OO-6Vy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="z5Y-lw-GCX"/>
@@ -106,7 +109,7 @@
                 <outlet property="likeLabel" destination="jg3-TI-zlM" id="pFe-yI-ecc"/>
                 <outlet property="postImageView" destination="kE7-74-s6h" id="a8s-8V-Imq"/>
             </connections>
-            <point key="canvasLocation" x="137.59999999999999" y="390.40479760119945"/>
+            <point key="canvasLocation" x="136.875" y="389.78873239436621"/>
         </tableViewCell>
     </objects>
     <resources>

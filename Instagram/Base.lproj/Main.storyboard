@@ -102,7 +102,7 @@
                                     <action selector="handleCancelButton:" destination="cCb-iy-8SS" eventType="touchUpInside" id="5fu-xZ-sOH"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="キャプション" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Csw-Sz-gHR">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="キャプション" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Csw-Sz-gHR">
                                 <rect key="frame" x="140" y="130" width="225" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -116,6 +116,7 @@
                             <constraint firstItem="vp7-oX-an2" firstAttribute="centerX" secondItem="Wh7-YZ-cYu" secondAttribute="centerX" id="3ca-61-b2J"/>
                             <constraint firstItem="Csw-Sz-gHR" firstAttribute="leading" secondItem="O1W-i1-HtX" secondAttribute="trailing" constant="10" id="Cws-i3-VZW"/>
                             <constraint firstItem="vp7-oX-an2" firstAttribute="top" secondItem="O1W-i1-HtX" secondAttribute="bottom" constant="20" id="KDX-Ke-pH0"/>
+                            <constraint firstItem="Csw-Sz-gHR" firstAttribute="bottom" secondItem="O1W-i1-HtX" secondAttribute="bottom" id="LCc-A7-1Nq"/>
                             <constraint firstItem="DIz-rg-Zci" firstAttribute="centerX" secondItem="Wh7-YZ-cYu" secondAttribute="centerX" id="g0B-0P-y1e"/>
                             <constraint firstItem="bgo-iO-9rm" firstAttribute="trailing" secondItem="Csw-Sz-gHR" secondAttribute="trailing" constant="10" id="lbA-rP-bWr"/>
                             <constraint firstItem="O1W-i1-HtX" firstAttribute="leading" secondItem="bgo-iO-9rm" secondAttribute="leading" constant="10" id="m8u-WS-DML"/>
@@ -194,7 +195,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lzq-0O-aOI">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lzq-0O-aOI">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
